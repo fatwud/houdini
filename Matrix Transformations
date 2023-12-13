@@ -1,0 +1,10 @@
+// Creating an blank 4x4 matrix
+matrix m = ident();
+
+// Transforming a packed primitive, note radians and vector normalization.
+matrix m = ident();
+vector pivot = primintrinsic(0, "pivot", @primnum);
+scale(m, chv("scale"));
+translate(m, chv("translate"));
+rotate(m, radians(chf("degrees_of_rotation")), normalize(chv("rotate"));
+translate(m, pivot);

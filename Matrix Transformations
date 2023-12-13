@@ -8,3 +8,4 @@ scale(m, chv("scale"));
 translate(m, chv("translate"));
 rotate(m, radians(chf("degrees_of_rotation")), normalize(chv("rotate"));
 translate(m, pivot);
+setpackedtransform(0, @primnum, m);

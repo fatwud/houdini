@@ -1,0 +1,2 @@
+// Create string attributes from int values, this will print out as piece_00, piece_01, piece_02 ect based on each point. This could be also based on class or other attributes.
+s@name = sprintf("piece_%d", i@ptnum);

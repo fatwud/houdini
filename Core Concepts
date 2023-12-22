@@ -1,0 +1,17 @@
+// While loop
+// This loop will test to see if @P.y is greater than 15 and if so it will reduce the green index by 0.1. If the @Cd.g should ever drop below or equal to 0, it will be removed.
+// The break function immediately exits the loop. 
+while(@P.y< 15){
+  @Cd.g -= 0.1;
+  if(@Cd.g <= 0){
+    removepoint(0,@ptnum);
+  break;
+}
+
+
+// Do loop
+{
+  @Cd.g -=0.1;
+  break;
+}
+while(@

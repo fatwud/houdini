@@ -16,3 +16,21 @@ while(@P.y< 15){
   i@counter += 1;
 }
 while(@P.y<1000);
+
+// Array
+// This will create a local variable array called myArray, then also create and attribute call myArray.
+// Note it is important where the brackets go. For local varaibles the need to go after the array name, for attributes they need to go after the data type but before the name.
+// If you are setting an attribute array from a local array, you don't need the brackets after the local variable, Houdini will know that it is an array.
+int myArray[] = {1,15,23,62};
+i[]myArray = myArray;
+
+// Foreach
+// Create an array consisting of 3 sets of vectors, for each element (each set of vectors) in the array.
+// Ff the vector is equal to {1,0,0} then set the value of the first element in the array [0], equal to a random value determined by its @ptnum and seed values.
+v[]colors = {{1,0,0}, {0,1,0}, {0,0,1}}
+foreach(vector x; @colors){
+  if(x == {1,0,0})
+    {
+      @colors[0] = set(rand(@ptnum + 123), rand(@ptnum + 231), rand(@otnum + 312));
+  }
+}

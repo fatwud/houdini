@@ -10,8 +10,9 @@ while(@P.y< 15){
 
 
 // Do loop
+// This loop will add 0.1 to @P.y, and will add 1 to the attribute counter. This will continue until @P.y is 1000 then move on to the next point.
 {
-  @Cd.g -=0.1;
-  break;
+  @P.y += 0.1;
+  i@counter += 1;
 }
-while(@
+while(@P.y<1000);

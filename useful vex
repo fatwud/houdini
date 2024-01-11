@@ -1,0 +1,3 @@
+// create a counter that cycles 0-1 every nth frame
+int duration = chi("Frame_Duration");
+f@counter = (@Frame/duration) % 1;

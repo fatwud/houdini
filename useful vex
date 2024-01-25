@@ -4,4 +4,4 @@ f@counter = (@Frame/duration) % 1;
 
 // create a counter that increases by 1 every nth frame
 int duration = chf("Frame_Duration");
-float counter = floor(@Frame / duration);
+f@counter = floor(@Frame / duration);

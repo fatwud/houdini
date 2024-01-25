@@ -1,3 +1,7 @@
 // create a counter that cycles 0-1 every nth frame
 int duration = chi("Frame_Duration");
 f@counter = (@Frame/duration) % 1;
+
+// create a counter that increases by 1 every nth frame
+int duration = chf("Frame_Duration");
+float counter = floor(@Frame / duration);

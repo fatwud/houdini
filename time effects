@@ -1,0 +1,6 @@
+// For looping a given number of frames with a time shift node.
+// Set the timeshift to Clamp to first
+// In the frame parameter use the following expression, where n is the desired time to loop, say on frame 24 use 24 as the value.
+($F-1) % n + 1
+// The + 1 is so that way the value doesn't return 0, and reference the 0th frame.
+// The - 1 is to ensure that the first frame isn't read as 2.

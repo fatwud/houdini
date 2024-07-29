@@ -1,0 +1,55 @@
+// Attribute Wrangle 1 (DETAIL)
+// Create Frame List & Split into Array
+string frameList = chs("Activation_Frames");
+string frameListArray[] = split(frameList);
+
+// Initialize Frame Array
+i[]@activationFrames;
+
+foreach(string frame_str; frameListArray){
+    int frame = atoi(frame_str);
+    append(i@activationFrames, frame);
+}
+
+// Attribute Wrangle 2 (POINT)
+int currentFrame = int(@Frame);
+i@activeState = 0;
+int frameArray[] = detail(0, "activationFrames");
+
+foreach (int frame; frameArray)
+{
+    if (currentFrame == frame)
+    {
+        i@activeState = 1;
+        break;
+    }
+}
+
+
+//Optional durationController (merge with switch node, run over DETAIL)
+//Create duration controller & temp array
+int duration = chi("Duration");
+int tempArray[];
+
+// OUTER LOOP
+//create counter to run through
+// extract current value "baseValue"
+// initalize loop control variable, i, to control the number of times
+// the loop executes, check before each iteration if i, is less than the
+// length of the arrray, ++i updates the loop control variable
+// use the loop variable to access the data at the given index of the array
+
+// INNER LOOP
+// using the inner control loop variable, as long as it is less than or equal
+// to the duration, append the inner control variable to the baseValue, thereby
+// adding an additonal one up to the duration
+
+for (int i = 0; i < len(i[]@activationFrames); ++i){
+    int baseValue = i[]@activationFrames[i];
+        for (int j = 0; j <= duration; ++j){
+        
+        append(tempArray, baseValue + j);
+    }
+}
+
+i[]@activationFrames = tempArray;
